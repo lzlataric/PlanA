@@ -6,16 +6,27 @@
 //
 
 import Foundation
+import Combine
 
 class HomepageViewModel: ObservableObject {
     
     let dateFormatter = DateFormatter()
     
     @Published var currentUsedDate = Date()
-    @Published var weekDays: [Date] = []
+    @Published var weekCollection: [[Date.WeekDay]] = []
     
     init() {
-        weekDays = Calendar.current.daysWithSameWeekOfYear(as: Date())
+        let currentWeek = Date().getWeek()
+        
+        if let firstDate = currentWeek.first?.date {
+            weekCollection.append(firstDate.getPreviousWeek())
+        }
+        
+        weekCollection.append(currentWeek)
+        
+        if let lastDate = currentWeek.last?.date {
+            weekCollection.append(lastDate.getNextWeek())
+        }
     }
     
     func getDayName(date: Date) -> String {
@@ -42,31 +53,4 @@ class HomepageViewModel: ObservableObject {
         dateFormatter.dateFormat = "MMM"
         return dateFormatter.string(from: date)
     }
-    
-    func getWeekDays(date: Date) -> [Date] {
-        return Calendar.current.daysWithSameWeekOfYear(as: date)
-    }
-    
-}
-
-extension Calendar {
-  func intervalOfWeek(for date: Date) -> DateInterval? {
-    dateInterval(of: .weekOfYear, for: date)
-  }
-
-  func startOfWeek(for date: Date) -> Date? {
-    intervalOfWeek(for: date)?.start
-  }
-
-  func daysWithSameWeekOfYear(as date: Date) -> [Date] {
-    guard let startOfWeek = startOfWeek(for: date) else {
-      return []
-    }
-
-    //Since start of week is sunday it has to be 1 ...7
-    return (1 ... 7).reduce(into: []) { result, daysToAdd in
-      result.append(Calendar.current.date(byAdding: .day, value: daysToAdd, to: startOfWeek))
-    }
-    .compactMap { $0 }
-  }
 }

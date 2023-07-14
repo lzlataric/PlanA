@@ -10,9 +10,6 @@ import SwiftUI
 struct HomepageView: View {
     
     @ObservedObject var viewModel: HomepageViewModel
-    @State var selectedDate = Date()
-    
-    
     var body: some View {
         ZStack {
             Color.lightGray
@@ -28,18 +25,11 @@ struct HomepageView: View {
                     .padding(.leading, 20)
                     Spacer()
                 }
-                
-                WeeklyCalendarView(viewModel: viewModel)
+                WeeklyCalendarPageTabView(viewModel: viewModel)
+                    .frame(height: 65)
                     .padding(.top, 20)
                 
                 Spacer()
-                
-                Button("Button title") {
-                    var dayComponent    = DateComponents()
-                    dayComponent.day    = 1
-                    viewModel.currentUsedDate = Calendar.current.date(byAdding: dayComponent, to: viewModel.currentUsedDate) ?? Date()
-                    print("AA")
-                }
             }
         }
     }
