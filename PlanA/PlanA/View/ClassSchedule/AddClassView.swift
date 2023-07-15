@@ -18,7 +18,7 @@ struct AddClassView: View {
             
             Button("Add") {
                 if subjectName != "" {
-                    viewModel.saveSubject(subjectName: subjectName)
+                    viewModel.saveSubject(subjectName: subjectName, dayName: viewModel.selectedDay)
                     dismiss()
                 }
             }

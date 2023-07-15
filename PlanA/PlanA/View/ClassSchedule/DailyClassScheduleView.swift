@@ -9,20 +9,21 @@ import SwiftUI
 
 struct DailyClassScheduleView: View {
     @ObservedObject var viewModel: ClassScheduleViewModel
+    @Binding var subjectList: [SchoolSubject]
     @State var shouldAdd = false
     var body: some View {
         VStack {
-            Text("Monday")
+            Text(viewModel.selectedDay.rawValue)
                 .font(.headline)
                 .fontWeight(.bold)
             
-           Spacer()
+            Spacer()
             
             ScrollView {
-                ForEach(viewModel.subjects, id: \.self) { subject in
+                ForEach(subjectList, id: \.self) { subject in
                     ClassContainerView(subject: subject.subjectName ?? "NaN")
                         .onLongPressGesture {
-                            viewModel.deleteSubject(subject: subject)
+                            viewModel.deleteSubject(subject: subject, dayName: viewModel.selectedDay)
                         }
                 }
                 ClassContainerAddView()
@@ -34,13 +35,13 @@ struct DailyClassScheduleView: View {
             Spacer()
         }
         .sheet(isPresented: $shouldAdd) {
-                    AddClassView(viewModel: viewModel)
-                }
+            AddClassView(viewModel: viewModel)
+        }
     }
 }
 
-struct DailyClassScheduleView_Previews: PreviewProvider {
-    static var previews: some View {
-        DailyClassScheduleView(viewModel: ClassScheduleViewModel())
-    }
-}
+//struct DailyClassScheduleView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DailyClassScheduleView(viewModel: ClassScheduleViewModel())
+//    }
+//}
