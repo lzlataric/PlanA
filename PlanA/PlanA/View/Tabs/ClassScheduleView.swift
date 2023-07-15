@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct ClassScheduleView: View {
+    @ObservedObject var viewModel = ClassScheduleViewModel()
     var body: some View {
-        Text("Class schedule")
+        TabView() {
+            DailyClassScheduleView(viewModel: viewModel)
+            DailyClassScheduleView(viewModel: viewModel)
+            DailyClassScheduleView(viewModel: viewModel)
+            DailyClassScheduleView(viewModel: viewModel)
+            DailyClassScheduleView(viewModel: viewModel)
+        }
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
     }
 }
 

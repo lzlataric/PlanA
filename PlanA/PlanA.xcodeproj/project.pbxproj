@@ -7,9 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A143B6312A6300FB002783F5 /* SchoolSubject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A143B62F2A6300FB002783F5 /* SchoolSubject.xcdatamodeld */; };
+		A143B6342A630158002783F5 /* SchoolSubject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143B6322A630158002783F5 /* SchoolSubject+CoreDataClass.swift */; };
+		A143B6352A630158002783F5 /* SchoolSubject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143B6332A630158002783F5 /* SchoolSubject+CoreDataProperties.swift */; };
 		A17E7D8D2A615E5000C41C80 /* WeeklyCalendarPageTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17E7D8C2A615E5000C41C80 /* WeeklyCalendarPageTabView.swift */; };
 		A17E7D932A61F56900C41C80 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17E7D922A61F56900C41C80 /* Date+Ext.swift */; };
 		A17E7D952A61F6E300C41C80 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17E7D942A61F6E300C41C80 /* Color+Ext.swift */; };
+		A198DE852A62AD9E00157285 /* DailyClassScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A198DE842A62AD9E00157285 /* DailyClassScheduleView.swift */; };
+		A198DE872A62AE6600157285 /* ClassContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A198DE862A62AE6600157285 /* ClassContainerView.swift */; };
+		A198DE892A62AF6400157285 /* ClassScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A198DE882A62AF6400157285 /* ClassScheduleViewModel.swift */; };
+		A198DE8B2A62B5D800157285 /* ClassContainerAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A198DE8A2A62B5D800157285 /* ClassContainerAddView.swift */; };
+		A198DE8D2A62B78100157285 /* AddClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A198DE8C2A62B78100157285 /* AddClassView.swift */; };
+		A198DE952A62F4D000157285 /* CoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A198DE942A62F4D000157285 /* CoreDataProvider.swift */; };
+		A198DE972A62F68200157285 /* SubjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A198DE962A62F68200157285 /* SubjectRepository.swift */; };
 		A1DA492B2A614720007A805C /* PlanAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DA492A2A614720007A805C /* PlanAApp.swift */; };
 		A1DA492F2A614722007A805C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1DA492E2A614722007A805C /* Assets.xcassets */; };
 		A1DA49322A614722007A805C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1DA49312A614722007A805C /* Preview Assets.xcassets */; };
@@ -22,9 +32,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A143B6302A6300FB002783F5 /* SchoolSubject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SchoolSubject.xcdatamodel; sourceTree = "<group>"; };
+		A143B6322A630158002783F5 /* SchoolSubject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SchoolSubject+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		A143B6332A630158002783F5 /* SchoolSubject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SchoolSubject+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		A17E7D8C2A615E5000C41C80 /* WeeklyCalendarPageTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyCalendarPageTabView.swift; sourceTree = "<group>"; };
 		A17E7D922A61F56900C41C80 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		A17E7D942A61F6E300C41C80 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		A198DE842A62AD9E00157285 /* DailyClassScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyClassScheduleView.swift; sourceTree = "<group>"; };
+		A198DE862A62AE6600157285 /* ClassContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassContainerView.swift; sourceTree = "<group>"; };
+		A198DE882A62AF6400157285 /* ClassScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassScheduleViewModel.swift; sourceTree = "<group>"; };
+		A198DE8A2A62B5D800157285 /* ClassContainerAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassContainerAddView.swift; sourceTree = "<group>"; };
+		A198DE8C2A62B78100157285 /* AddClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClassView.swift; sourceTree = "<group>"; };
+		A198DE942A62F4D000157285 /* CoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProvider.swift; sourceTree = "<group>"; };
+		A198DE962A62F68200157285 /* SubjectRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectRepository.swift; sourceTree = "<group>"; };
 		A1DA49272A614720007A805C /* PlanA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1DA492A2A614720007A805C /* PlanAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanAApp.swift; sourceTree = "<group>"; };
 		A1DA492E2A614722007A805C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,6 +84,26 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		A198DE832A62AD8000157285 /* ClassSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				A198DE842A62AD9E00157285 /* DailyClassScheduleView.swift */,
+				A198DE862A62AE6600157285 /* ClassContainerView.swift */,
+				A198DE8A2A62B5D800157285 /* ClassContainerAddView.swift */,
+				A198DE8C2A62B78100157285 /* AddClassView.swift */,
+			);
+			path = ClassSchedule;
+			sourceTree = "<group>";
+		};
+		A198DEA22A62FD2600157285 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A143B6322A630158002783F5 /* SchoolSubject+CoreDataClass.swift */,
+				A143B6332A630158002783F5 /* SchoolSubject+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		A1DA491E2A614720007A805C = {
 			isa = PBXGroup;
 			children = (
@@ -83,12 +123,18 @@
 		A1DA49292A614720007A805C /* PlanA */ = {
 			isa = PBXGroup;
 			children = (
+				A198DEA22A62FD2600157285 /* CoreData */,
+				A17E7D8E2A61CDE000C41C80 /* Extensions */,
+				A17E7D8F2A61CDEC00C41C80 /* Helpers */,
 				A1DA493E2A6147F1007A805C /* Model */,
 				A1DA493F2A6147F1007A805C /* View */,
 				A1DA49472A6147F1007A805C /* ViewModel */,
 				A1DA492A2A614720007A805C /* PlanAApp.swift */,
 				A1DA492E2A614722007A805C /* Assets.xcassets */,
 				A1DA49302A614722007A805C /* Preview Content */,
+				A198DE942A62F4D000157285 /* CoreDataProvider.swift */,
+				A198DE962A62F68200157285 /* SubjectRepository.swift */,
+				A143B62F2A6300FB002783F5 /* SchoolSubject.xcdatamodeld */,
 			);
 			path = PlanA;
 			sourceTree = "<group>";
@@ -111,11 +157,10 @@
 		A1DA493F2A6147F1007A805C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A17E7D8F2A61CDEC00C41C80 /* Helpers */,
-				A17E7D8E2A61CDE000C41C80 /* Extensions */,
+				A1DA49462A6147F1007A805C /* TabbarView.swift */,
+				A198DE832A62AD8000157285 /* ClassSchedule */,
 				A1DA49402A6147F1007A805C /* Tabs */,
 				A1DA49442A6147F1007A805C /* Homepage */,
-				A1DA49462A6147F1007A805C /* TabbarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -143,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				A1DA49482A6147F1007A805C /* HomepageViewModel.swift */,
+				A198DE882A62AF6400157285 /* ClassScheduleViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -218,15 +264,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1DA494D2A6147F1007A805C /* TabbarView.swift in Sources */,
+				A198DE952A62F4D000157285 /* CoreDataProvider.swift in Sources */,
+				A198DE8D2A62B78100157285 /* AddClassView.swift in Sources */,
 				A1DA494C2A6147F1007A805C /* WeeklyCalendarView.swift in Sources */,
+				A198DE852A62AD9E00157285 /* DailyClassScheduleView.swift in Sources */,
+				A198DE8B2A62B5D800157285 /* ClassContainerAddView.swift in Sources */,
 				A1DA494A2A6147F1007A805C /* ClassScheduleView.swift in Sources */,
 				A1DA494E2A6147F1007A805C /* HomepageViewModel.swift in Sources */,
 				A17E7D8D2A615E5000C41C80 /* WeeklyCalendarPageTabView.swift in Sources */,
+				A198DE972A62F68200157285 /* SubjectRepository.swift in Sources */,
+				A143B6312A6300FB002783F5 /* SchoolSubject.xcdatamodeld in Sources */,
+				A143B6342A630158002783F5 /* SchoolSubject+CoreDataClass.swift in Sources */,
+				A143B6352A630158002783F5 /* SchoolSubject+CoreDataProperties.swift in Sources */,
 				A1DA492B2A614720007A805C /* PlanAApp.swift in Sources */,
 				A1DA494B2A6147F1007A805C /* HomepageView.swift in Sources */,
 				A1DA49492A6147F1007A805C /* MainCalendarView.swift in Sources */,
 				A17E7D932A61F56900C41C80 /* Date+Ext.swift in Sources */,
 				A17E7D952A61F6E300C41C80 /* Color+Ext.swift in Sources */,
+				A198DE872A62AE6600157285 /* ClassContainerView.swift in Sources */,
+				A198DE892A62AF6400157285 /* ClassScheduleViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +419,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -392,6 +449,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -427,6 +485,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A143B62F2A6300FB002783F5 /* SchoolSubject.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A143B6302A6300FB002783F5 /* SchoolSubject.xcdatamodel */,
+			);
+			currentVersion = A143B6302A6300FB002783F5 /* SchoolSubject.xcdatamodel */;
+			path = SchoolSubject.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A1DA491F2A614720007A805C /* Project object */;
 }

@@ -12,6 +12,7 @@ struct PlanAApp: App {
     var body: some Scene {
         WindowGroup {
             TabbarView()
+                .environment(\.managedObjectContext, CoreDataProvider.shared.persistentContainer.viewContext)
         }
     }
 }
