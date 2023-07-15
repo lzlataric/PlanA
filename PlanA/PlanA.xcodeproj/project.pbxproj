@@ -68,6 +68,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A143B6362A635D87002783F5 /* CoreDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				A143B62F2A6300FB002783F5 /* SchoolSubject.xcdatamodeld */,
+			);
+			path = CoreDataModel;
+			sourceTree = "<group>";
+		};
+		A143B6372A635DAB002783F5 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A198DE942A62F4D000157285 /* CoreDataProvider.swift */,
+				A198DE962A62F68200157285 /* SubjectRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		A17E7D8E2A61CDE000C41C80 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +140,7 @@
 		A1DA49292A614720007A805C /* PlanA */ = {
 			isa = PBXGroup;
 			children = (
+				A143B6372A635DAB002783F5 /* Repository */,
 				A198DEA22A62FD2600157285 /* CoreData */,
 				A17E7D8E2A61CDE000C41C80 /* Extensions */,
 				A17E7D8F2A61CDEC00C41C80 /* Helpers */,
@@ -132,9 +150,6 @@
 				A1DA492A2A614720007A805C /* PlanAApp.swift */,
 				A1DA492E2A614722007A805C /* Assets.xcassets */,
 				A1DA49302A614722007A805C /* Preview Content */,
-				A198DE942A62F4D000157285 /* CoreDataProvider.swift */,
-				A198DE962A62F68200157285 /* SubjectRepository.swift */,
-				A143B62F2A6300FB002783F5 /* SchoolSubject.xcdatamodeld */,
 			);
 			path = PlanA;
 			sourceTree = "<group>";
@@ -150,6 +165,7 @@
 		A1DA493E2A6147F1007A805C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A143B6362A635D87002783F5 /* CoreDataModel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
