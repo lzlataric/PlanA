@@ -13,7 +13,7 @@ class CoreDataProvider: ObservableObject {
     let persistentContainer : NSPersistentContainer
     
     private init() {
-        persistentContainer = NSPersistentContainer(name: "SchoolSubject")
+        persistentContainer = NSPersistentContainer(name: "PlanA")
         persistentContainer.loadPersistentStores { desc, error in
             if let error {
                 print("CoreDataProvider init ERROR")

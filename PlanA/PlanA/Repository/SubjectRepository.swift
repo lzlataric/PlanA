@@ -30,6 +30,7 @@ class SubjectRepository {
     
     func saveSubject(subjectName: String, dayName: Days) throws {
         let newSubject = SchoolSubject(context: SubjectRepository.viewContext)
+        newSubject.id = UUID()
         newSubject.classroom = String(Int.random(in: 1..<100))
         newSubject.dayName = dayName.rawValue
         newSubject.subjectName = subjectName

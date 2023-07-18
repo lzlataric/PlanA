@@ -2,7 +2,7 @@
 //  SchoolSubject+CoreDataProperties.swift
 //  PlanA
 //
-//  Created by Luka on 15.07.2023..
+//  Created by Luka on 18.07.2023..
 //
 //
 
@@ -16,9 +16,10 @@ extension SchoolSubject {
         return NSFetchRequest<SchoolSubject>(entityName: "SchoolSubject")
     }
 
+    @NSManaged public var classroom: String?
     @NSManaged public var dayName: String?
     @NSManaged public var subjectName: String?
-    @NSManaged public var classroom: String?
+    @NSManaged public var id: UUID?
 
 }
 

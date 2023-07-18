@@ -41,7 +41,7 @@ class ClassScheduleViewModel: ObservableObject {
         do {
             try subjectRepository.saveSubject(subjectName: subjectName, dayName: dayName)
         } catch {
-            print("EROOOOOOOOR")
+            print(error.localizedDescription)
         }
         getSubjets(dayName: dayName)
     }

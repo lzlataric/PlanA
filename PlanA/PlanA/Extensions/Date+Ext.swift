@@ -52,4 +52,10 @@ extension Date {
         var id: UUID = .init()
         var date: Date
     }
+    
+    func getStringDate() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        return dateFormatter.string(from: self)
+    }
 }

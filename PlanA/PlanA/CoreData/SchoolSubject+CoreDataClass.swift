@@ -2,7 +2,7 @@
 //  SchoolSubject+CoreDataClass.swift
 //  PlanA
 //
-//  Created by Luka on 15.07.2023..
+//  Created by Luka on 18.07.2023..
 //
 //
 

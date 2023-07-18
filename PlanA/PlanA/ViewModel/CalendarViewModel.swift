@@ -8,15 +8,18 @@
 import Foundation
 import Combine
 
-class HomepageViewModel: ObservableObject {
+class CalendarViewModel: ObservableObject {
     
+    private var dailyTaskRepository = DailyTaskRepository()
     let dateFormatter = DateFormatter()
     
     @Published var currentUsedDate = Date()
     @Published var weekCollection: [[Date.WeekDay]] = []
+    @Published var dailyTasks: [DailyTask] = []
     
     init() {
         let currentWeek = Date().getWeek()
+        getTasks(date: Date())
         
         if let firstDate = currentWeek.first?.date {
             weekCollection.append(firstDate.getPreviousWeek())
@@ -29,6 +32,25 @@ class HomepageViewModel: ObservableObject {
         }
     }
     
+    func getTasks(date: Date) {
+        dailyTasks = dailyTaskRepository.getDailyTask(date: date)
+    }
+    
+    func saveTask(subjectName: String, taskType: String, taskDesc: String) {
+        do {
+            try dailyTaskRepository.saveTask(date: currentUsedDate, subjectName: subjectName, taskType: taskType, taskDesc: taskDesc)
+        } catch {
+            print(error.localizedDescription)
+        }
+        getTasks(date: currentUsedDate)
+    }
+    
+    func deleteTask(task: DailyTask) {
+        dailyTaskRepository.deleteSubject(task: task, date: currentUsedDate)
+        getTasks(date: currentUsedDate)
+    }
+    
+    //TODO: Move this to date extension
     func getDayName(date: Date) -> String {
         dateFormatter.dateFormat = "EEEE"
         return dateFormatter.string(from: date)

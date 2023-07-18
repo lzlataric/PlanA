@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ClassScheduleView: View {
-    @ObservedObject var viewModel = ClassScheduleViewModel()
+    //@ObservedObject var viewModel = ClassScheduleViewModel()
+    @ObservedObject var viewModel : ClassScheduleViewModel
     @State private var selectedWeekIndex: Int = 0
     var body: some View {
         TabView(selection: self.$selectedWeekIndex) {
@@ -34,6 +35,6 @@ struct ClassScheduleView: View {
 
 struct ClassScheduleView_Previews: PreviewProvider {
     static var previews: some View {
-        ClassScheduleView()
+        ClassScheduleView(viewModel: ClassScheduleViewModel())
     }
 }

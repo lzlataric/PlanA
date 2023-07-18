@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WeeklyCalendarPageTabView: View {
-    @ObservedObject var viewModel: HomepageViewModel
+    @ObservedObject var viewModel: CalendarViewModel
     @State private var selectedWeekIndex: Int = 1
     @State private var createWeek: Bool = false
     var body: some View {
@@ -46,6 +46,6 @@ struct WeeklyCalendarPageTabView: View {
 
 struct WeeklyCalendarPageTabView_Previews: PreviewProvider {
     static var previews: some View {
-        WeeklyCalendarPageTabView(viewModel: HomepageViewModel())
+        WeeklyCalendarPageTabView(viewModel: CalendarViewModel())
     }
 }

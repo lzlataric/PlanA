@@ -9,13 +9,15 @@ import SwiftUI
 
 struct TabbarView: View {
     var body: some View {
+        @ObservedObject var classScheduleViewModel = ClassScheduleViewModel()
+        @ObservedObject var calendarViewModel = CalendarViewModel()
         TabView {
-            ClassScheduleView()
+            ClassScheduleView(viewModel: classScheduleViewModel)
                 .tabItem {
                     Label("Schedule", systemImage: "studentdesk")
                 }
             
-            HomepageView(viewModel: HomepageViewModel())
+            HomepageView(viewModel: calendarViewModel)
                 .tabItem {
                     Label("Home", systemImage: "list.bullet.clipboard")
                 }

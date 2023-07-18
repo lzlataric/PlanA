@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WeeklyCalendarView: View {
     
-    @ObservedObject var viewModel: HomepageViewModel
+    @ObservedObject var viewModel: CalendarViewModel
     var week: [Date.WeekDay]
     
     var body: some View {
@@ -49,6 +49,7 @@ struct WeeklyCalendarView: View {
                     .frame(width: 55, height: 60)
                     .onTapGesture {
                         viewModel.currentUsedDate = day.date
+                        viewModel.getTasks(date: day.date)
                     }
                 }
             }
