@@ -11,11 +11,11 @@ import Combine
 class CalendarViewModel: ObservableObject {
     
     private var dailyTaskRepository = DailyTaskRepository()
-    let dateFormatter = DateFormatter()
     
     @Published var currentUsedDate = Date()
     @Published var weekCollection: [[Date.WeekDay]] = []
     @Published var dailyTasks: [DailyTask] = []
+    @Published var selectedWeekIndex = 1
     
     init() {
         let currentWeek = Date().getWeek()
@@ -50,29 +50,46 @@ class CalendarViewModel: ObservableObject {
         getTasks(date: currentUsedDate)
     }
     
-    //TODO: Move this to date extension
-    func getDayName(date: Date) -> String {
-        dateFormatter.dateFormat = "EEEE"
-        return dateFormatter.string(from: date)
+    func createNewWeek() {
+        if weekCollection.indices.contains(selectedWeekIndex) {
+            if let firstDate = weekCollection[selectedWeekIndex].first?.date, selectedWeekIndex == 0 {
+                weekCollection.insert(firstDate.getPreviousWeek(), at: 0)
+                weekCollection.removeLast()
+                selectedWeekIndex = 1
+            }
+            
+            if let lastDate = weekCollection[selectedWeekIndex].last?.date, selectedWeekIndex == weekCollection.count - 1{
+                weekCollection.append(lastDate.getNextWeek())
+                weekCollection.removeFirst()
+                selectedWeekIndex = weekCollection.count - 2
+            }
+        }
     }
 
-    func getHomepageTitleDateFormat(date: Date) -> String {
-        dateFormatter.dateFormat = "MMM d, yyyy"
-        return dateFormatter.string(from: date)
-    }
     
-    func getWeeklyCalendarDayName(date: Date) -> String {
-        dateFormatter.dateFormat = "EEE"
-        return dateFormatter.string(from: date)
-    }
-    
-    func getWeeklyCalendarDay(date: Date) -> String {
-        dateFormatter.dateFormat = "d"
-        return dateFormatter.string(from: date)
-    }
-    
-    func getWeeklyCalendarDayMonth(date: Date) -> String {
-        dateFormatter.dateFormat = "MMM"
-        return dateFormatter.string(from: date)
-    }
+    //DONE: Move this to date extension
+//    func getDayName(date: Date) -> String {
+//        dateFormatter.dateFormat = "EEEE"
+//        return dateFormatter.string(from: date)
+//    }
+//
+//    func getHomepageTitleDateFormat(date: Date) -> String {
+//        dateFormatter.dateFormat = "MMM d, yyyy"
+//        return dateFormatter.string(from: date)
+//    }
+//
+//    func getWeeklyCalendarDayName(date: Date) -> String {
+//        dateFormatter.dateFormat = "EEE"
+//        return dateFormatter.string(from: date)
+//    }
+//
+//    func getWeeklyCalendarDay(date: Date) -> String {
+//        dateFormatter.dateFormat = "d"
+//        return dateFormatter.string(from: date)
+//    }
+//
+//    func getWeeklyCalendarDayMonth(date: Date) -> String {
+//        dateFormatter.dateFormat = "MMM"
+//        return dateFormatter.string(from: date)
+//    }
 }

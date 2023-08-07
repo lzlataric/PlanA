@@ -18,10 +18,12 @@ struct WeeklyCalendarView: View {
             ForEach(week) { day in
                 if Calendar.current.isDate(day.date, inSameDayAs: viewModel.currentUsedDate) {
                     VStack {
-                        Text(viewModel.getWeeklyCalendarDayName(date: day.date))
+//                        Text(viewModel.getWeeklyCalendarDayName(date: day.date))
+                        Text(day.date.getWeeklyCalendarDayName())
                             .font(.system(size: 12, weight: .bold, design: .rounded))
                             .foregroundColor(.gray)
-                        Text(viewModel.getWeeklyCalendarDay(date: day.date))
+//                        Text(viewModel.getWeeklyCalendarDay(date: day.date))
+                        Text(day.date.getWeeklyCalendarDay())
                             .font(.system(size: 20, weight: .bold, design: .rounded))
                             .foregroundColor(.black)
                         
@@ -34,10 +36,12 @@ struct WeeklyCalendarView: View {
                     
                 } else {
                     VStack {
-                        Text(viewModel.getWeeklyCalendarDayName(date: day.date))
+//                        Text(viewModel.getWeeklyCalendarDayName(date: day.date))
+                        Text(day.date.getWeeklyCalendarDayName())
                             .font(.system(size: 12, weight: .bold, design: .rounded))
                             .foregroundColor(.gray)
-                        Text(viewModel.getWeeklyCalendarDay(date: day.date))
+//                        Text(viewModel.getWeeklyCalendarDay(date: day.date))
+                        Text(day.date.getWeeklyCalendarDay())
                             .font(.system(size: 20, weight: .bold, design: .rounded))
                             .foregroundColor(.black)
                         

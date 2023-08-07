@@ -24,6 +24,9 @@
 		A198DE8D2A62B78100157285 /* AddClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A198DE8C2A62B78100157285 /* AddClassView.swift */; };
 		A198DE952A62F4D000157285 /* CoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A198DE942A62F4D000157285 /* CoreDataProvider.swift */; };
 		A198DE972A62F68200157285 /* SubjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A198DE962A62F68200157285 /* SubjectRepository.swift */; };
+		A1CF972D2A7FB94900FD37D1 /* ClassPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CF972C2A7FB94900FD37D1 /* ClassPickerCell.swift */; };
+		A1CF972F2A7FBB4400FD37D1 /* ClassModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CF972E2A7FBB4400FD37D1 /* ClassModel.swift */; };
+		A1CF97312A80F9DE00FD37D1 /* ClassPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CF97302A80F9DE00FD37D1 /* ClassPickerView.swift */; };
 		A1DA492B2A614720007A805C /* PlanAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DA492A2A614720007A805C /* PlanAApp.swift */; };
 		A1DA492F2A614722007A805C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1DA492E2A614722007A805C /* Assets.xcassets */; };
 		A1DA49322A614722007A805C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1DA49312A614722007A805C /* Preview Assets.xcassets */; };
@@ -53,6 +56,9 @@
 		A198DE8C2A62B78100157285 /* AddClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClassView.swift; sourceTree = "<group>"; };
 		A198DE942A62F4D000157285 /* CoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProvider.swift; sourceTree = "<group>"; };
 		A198DE962A62F68200157285 /* SubjectRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectRepository.swift; sourceTree = "<group>"; };
+		A1CF972C2A7FB94900FD37D1 /* ClassPickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassPickerCell.swift; sourceTree = "<group>"; };
+		A1CF972E2A7FBB4400FD37D1 /* ClassModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassModel.swift; sourceTree = "<group>"; };
+		A1CF97302A80F9DE00FD37D1 /* ClassPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassPickerView.swift; sourceTree = "<group>"; };
 		A1DA49272A614720007A805C /* PlanA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1DA492A2A614720007A805C /* PlanAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanAApp.swift; sourceTree = "<group>"; };
 		A1DA492E2A614722007A805C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,6 +119,7 @@
 		A198DE832A62AD8000157285 /* ClassSchedule */ = {
 			isa = PBXGroup;
 			children = (
+				A1CF972B2A7FB91E00FD37D1 /* ClassPicker */,
 				A198DE842A62AD9E00157285 /* DailyClassScheduleView.swift */,
 				A198DE862A62AE6600157285 /* ClassContainerView.swift */,
 				A198DE8A2A62B5D800157285 /* ClassContainerAddView.swift */,
@@ -130,6 +137,15 @@
 				A17EA70D2A6713350057C302 /* SchoolSubject+CoreDataProperties.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		A1CF972B2A7FB91E00FD37D1 /* ClassPicker */ = {
+			isa = PBXGroup;
+			children = (
+				A1CF972C2A7FB94900FD37D1 /* ClassPickerCell.swift */,
+				A1CF97302A80F9DE00FD37D1 /* ClassPickerView.swift */,
+			);
+			path = ClassPicker;
 			sourceTree = "<group>";
 		};
 		A1DA491E2A614720007A805C = {
@@ -177,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				A143B6362A635D87002783F5 /* CoreDataModel */,
+				A1CF972E2A7FBB4400FD37D1 /* ClassModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,7 +204,7 @@
 				A1DA49462A6147F1007A805C /* TabbarView.swift */,
 				A198DE832A62AD8000157285 /* ClassSchedule */,
 				A1DA49402A6147F1007A805C /* Tabs */,
-				A1DA49442A6147F1007A805C /* Homepage */,
+				A1DA49442A6147F1007A805C /* MainCalendar */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,14 +219,14 @@
 			path = Tabs;
 			sourceTree = "<group>";
 		};
-		A1DA49442A6147F1007A805C /* Homepage */ = {
+		A1DA49442A6147F1007A805C /* MainCalendar */ = {
 			isa = PBXGroup;
 			children = (
 				A1DA49452A6147F1007A805C /* WeeklyCalendarView.swift */,
 				A17E7D8C2A615E5000C41C80 /* WeeklyCalendarPageTabView.swift */,
 				A17EA7202A671D550057C302 /* AddTaskView.swift */,
 			);
-			path = Homepage;
+			path = MainCalendar;
 			sourceTree = "<group>";
 		};
 		A1DA49472A6147F1007A805C /* ViewModel */ = {
@@ -293,6 +310,7 @@
 			files = (
 				A1DA494D2A6147F1007A805C /* TabbarView.swift in Sources */,
 				A198DE952A62F4D000157285 /* CoreDataProvider.swift in Sources */,
+				A1CF97312A80F9DE00FD37D1 /* ClassPickerView.swift in Sources */,
 				A198DE8D2A62B78100157285 /* AddClassView.swift in Sources */,
 				A17EA7212A671D550057C302 /* AddTaskView.swift in Sources */,
 				A1DA494C2A6147F1007A805C /* WeeklyCalendarView.swift in Sources */,
@@ -301,6 +319,7 @@
 				A1DA494A2A6147F1007A805C /* ClassScheduleView.swift in Sources */,
 				A1DA494E2A6147F1007A805C /* CalendarViewModel.swift in Sources */,
 				A17E7D8D2A615E5000C41C80 /* WeeklyCalendarPageTabView.swift in Sources */,
+				A1CF972D2A7FB94900FD37D1 /* ClassPickerCell.swift in Sources */,
 				A198DE972A62F68200157285 /* SubjectRepository.swift in Sources */,
 				A17EA72C2A6733C60057C302 /* DailyTask+CoreDataClass.swift in Sources */,
 				A17EA71D2A67186A0057C302 /* DailyTaskRepository.swift in Sources */,
@@ -314,6 +333,7 @@
 				A17E7D952A61F6E300C41C80 /* Color+Ext.swift in Sources */,
 				A198DE872A62AE6600157285 /* ClassContainerView.swift in Sources */,
 				A17EA72D2A6733C60057C302 /* DailyTask+CoreDataProperties.swift in Sources */,
+				A1CF972F2A7FBB4400FD37D1 /* ClassModel.swift in Sources */,
 				A198DE892A62AF6400157285 /* ClassScheduleViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

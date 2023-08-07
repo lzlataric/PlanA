@@ -8,7 +8,7 @@
 import Foundation
 
 extension Date {
-      
+    
     func getWeek(date: Date = .init()) -> [WeekDay]{
         let calendar = Calendar.current
         let startOfDate = calendar.startOfDay(for: date)
@@ -56,6 +56,36 @@ extension Date {
     func getStringDate() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy"
+        return dateFormatter.string(from: self)
+    }
+    
+    func getDayName() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        return dateFormatter.string(from: self)
+    }
+
+    func getHomepageTitleDateFormat() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM d, yyyy"
+        return dateFormatter.string(from: self)
+    }
+    
+    func getWeeklyCalendarDayName() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEE"
+        return dateFormatter.string(from: self)
+    }
+    
+    func getWeeklyCalendarDay() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "d"
+        return dateFormatter.string(from: self)
+    }
+    
+    func getWeeklyCalendarDayMonth() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM"
         return dateFormatter.string(from: self)
     }
 }

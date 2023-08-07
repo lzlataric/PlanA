@@ -15,6 +15,18 @@ struct AddTaskView: View {
     @State var taskDesc = ""
     var body: some View {
         VStack {
+            HStack {
+                VStack(alignment: .trailing) {
+                    Text("Add new task")
+                        .font(.system(size: 25))
+                        .frame(width: 200)
+                }
+                Spacer()
+            }
+            .padding(.top, 10)
+            
+            Spacer()
+            
             TextField("Enter subject name", text: $subjectName)
                 .frame(width: 200)
             
@@ -27,6 +39,7 @@ struct AddTaskView: View {
                 .padding(.top, 20)
             
             Button("Add") {
+                //TODO: empty check
                 //if subjectName != "" {
                 viewModel.saveTask(subjectName: subjectName, taskType: taskType, taskDesc: taskDesc)
                     dismiss()

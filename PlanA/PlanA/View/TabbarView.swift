@@ -17,12 +17,12 @@ struct TabbarView: View {
                     Label("Schedule", systemImage: "studentdesk")
                 }
             
-            HomepageView(viewModel: calendarViewModel)
+            HomepageView()
                 .tabItem {
                     Label("Home", systemImage: "list.bullet.clipboard")
                 }
             
-            MainCalendarView()
+            MainCalendarView(viewModel: calendarViewModel)
                 .tabItem {
                     Label("Calendar", systemImage: "calendar")
                 }
